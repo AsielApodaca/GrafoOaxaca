@@ -10,5 +10,20 @@ package negocios.dominioGrafo;
  * @author Asiel Apodaca Monge
  */
 public class Vertice {
+    private String municipio;
 
+    public Vertice() {
+    }
+    
+    public Vertice(String municipio) {
+        this.municipio = municipio;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
 }
