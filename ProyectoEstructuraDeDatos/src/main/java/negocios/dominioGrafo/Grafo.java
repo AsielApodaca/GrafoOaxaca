@@ -25,6 +25,14 @@ public class Grafo {
         this.vertices = new ArrayList<>();
         this.aristas = new ArrayList<>();
     }
+
+    public List<Vertice> getVertices() {
+        return vertices;
+    }
+
+    public List<Arista> getAristas() {
+        return aristas;
+    }
     
     public void agregarVertice(String municipio) { // Agrega un municipio
         vertices.add(new Vertice(municipio));
