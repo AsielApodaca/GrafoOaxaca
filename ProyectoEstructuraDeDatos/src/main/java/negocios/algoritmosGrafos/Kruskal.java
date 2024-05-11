@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 package negocios.algoritmosGrafos;
 
 import java.util.ArrayList;
@@ -13,10 +8,6 @@ import negocios.dominioGrafo.Arista;
 import negocios.dominioGrafo.Grafo;
 import negocios.dominioGrafo.Vertice;
 
-/**
- *
- * @author Asiel Apodaca Monge
- */
 public class Kruskal {
 
     public Grafo calcularArbolExpansionMinima(Grafo grafo) {
@@ -24,7 +15,9 @@ public class Kruskal {
         List<Arista> aristasOrdenadasPorPeso = new ArrayList<>(grafo.getAristas());
         Collections.sort(aristasOrdenadasPorPeso, (a1, a2) -> a1.getPeso() - a2.getPeso());
 
-        DisjointSet disjointSet = new DisjointSet(grafo.getVertices());
+        List<Vertice> vertices = grafo.getVertices(); // Declaración de la variable vertices
+
+        DisjointSet disjointSet = new DisjointSet(vertices);
 
         for (Arista arista : aristasOrdenadasPorPeso) {
             Vertice origen = arista.getOrigen();
