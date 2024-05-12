@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package grafoOaxaca.presentacion;
 
@@ -10,17 +10,34 @@ import javax.swing.ImageIcon;
  *
  * @author Oliver Valle
  */
-public class FrmGrafoOaxaca extends javax.swing.JFrame {
+public class PanelGrafoOaxaca extends javax.swing.JPanel {
 
     /**
-     * Creates new form FrmGrafoOaxaca
+     * Creates new form PanelGrafoOaxaca
      */
-    public FrmGrafoOaxaca() {
+    public PanelGrafoOaxaca() {
         initComponents();
         background.setIcon(new ImageIcon("src/main/java/imgs/background.jpeg"));
         setDefaultIcons();
     }
 
+    public void setDefaultIcons() {
+        node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
+        node_2.setIcon(new ImageIcon("src/main/java/imgs/node_2.jpeg"));
+        node_3.setIcon(new ImageIcon("src/main/java/imgs/node_3.jpeg"));
+        node_4.setIcon(new ImageIcon("src/main/java/imgs/node_4.jpeg"));
+        node_5.setIcon(new ImageIcon("src/main/java/imgs/node_5.jpeg"));
+        node_6.setIcon(new ImageIcon("src/main/java/imgs/node_6.jpeg"));
+        node_7.setIcon(new ImageIcon("src/main/java/imgs/node_7.jpeg"));
+        node_8.setIcon(new ImageIcon("src/main/java/imgs/node_8.jpeg"));
+        node_9.setIcon(new ImageIcon("src/main/java/imgs/node_9.jpeg"));
+        node_10.setIcon(new ImageIcon("src/main/java/imgs/node_10.jpeg"));
+        node_11.setIcon(new ImageIcon("src/main/java/imgs/node_11.jpeg"));
+        node_12.setIcon(new ImageIcon("src/main/java/imgs/node_12.jpeg"));
+        node_13.setIcon(new ImageIcon("src/main/java/imgs/node_13.jpeg"));
+        node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
+        node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,10 +64,8 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
         node_15 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1008, 672));
-        setPreferredSize(new java.awt.Dimension(1008, 672));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         node_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -63,7 +78,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_1MouseExited(evt);
             }
         });
-        getContentPane().add(node_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 50, 50));
+        add(node_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 50, 50));
 
         node_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -76,7 +91,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_2MouseExited(evt);
             }
         });
-        getContentPane().add(node_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 50, 50));
+        add(node_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 50, 50));
 
         node_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -89,7 +104,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_3MouseExited(evt);
             }
         });
-        getContentPane().add(node_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 400, 50, 50));
+        add(node_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 400, 50, 50));
 
         node_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -102,7 +117,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_4MouseExited(evt);
             }
         });
-        getContentPane().add(node_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 50, 50));
+        add(node_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 50, 50));
 
         node_5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -115,7 +130,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_5MouseExited(evt);
             }
         });
-        getContentPane().add(node_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 50, 50));
+        add(node_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 50, 50));
 
         node_6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -128,7 +143,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_6MouseExited(evt);
             }
         });
-        getContentPane().add(node_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 50, 50));
+        add(node_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 50, 50));
 
         node_7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -141,7 +156,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_7MouseExited(evt);
             }
         });
-        getContentPane().add(node_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 50, 50));
+        add(node_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 50, 50));
 
         node_8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -154,7 +169,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_8MouseExited(evt);
             }
         });
-        getContentPane().add(node_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 420, 50, 50));
+        add(node_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 420, 50, 50));
 
         node_9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -167,7 +182,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_9MouseExited(evt);
             }
         });
-        getContentPane().add(node_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 50, 50));
+        add(node_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 50, 50));
 
         node_10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -180,7 +195,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_10MouseExited(evt);
             }
         });
-        getContentPane().add(node_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 70, 50, 50));
+        add(node_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 70, 50, 50));
 
         node_11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -193,7 +208,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_11MouseExited(evt);
             }
         });
-        getContentPane().add(node_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 50, 50));
+        add(node_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 50, 50));
 
         node_12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -206,7 +221,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_12MouseExited(evt);
             }
         });
-        getContentPane().add(node_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 530, 50, 50));
+        add(node_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 530, 50, 50));
 
         node_13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -219,7 +234,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_13MouseExited(evt);
             }
         });
-        getContentPane().add(node_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 50, 50));
+        add(node_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 50, 50));
 
         node_14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -232,7 +247,7 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_14MouseExited(evt);
             }
         });
-        getContentPane().add(node_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 50, 50));
+        add(node_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 50, 50));
 
         node_15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -245,19 +260,13 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
                 node_15MouseExited(evt);
             }
         });
-        getContentPane().add(node_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 50, 50));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        pack();
+        add(node_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 50, 50));
+        add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1008, 672));
     }// </editor-fold>//GEN-END:initComponents
 
     private void node_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_node_1MouseClicked
-
-    private void node_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_node_2MouseClicked
 
     private void node_1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseEntered
         node_1.setIcon(new ImageIcon("src/main/java/imgs/node_select_1.jpeg"));
@@ -266,6 +275,10 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
     private void node_1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseExited
         node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
     }//GEN-LAST:event_node_1MouseExited
+
+    private void node_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_2MouseClicked
 
     private void node_2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseEntered
         node_2.setIcon(new ImageIcon("src/main/java/imgs/node_select_2.jpeg"));
@@ -431,58 +444,6 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
         node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
     }//GEN-LAST:event_node_15MouseExited
 
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new FrmGrafoOaxaca().setVisible(true);
-//            }
-//        });
-//    }
-    
-    public void setDefaultIcons() {
-    node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
-    node_2.setIcon(new ImageIcon("src/main/java/imgs/node_2.jpeg"));
-    node_3.setIcon(new ImageIcon("src/main/java/imgs/node_3.jpeg"));
-    node_4.setIcon(new ImageIcon("src/main/java/imgs/node_4.jpeg"));
-    node_5.setIcon(new ImageIcon("src/main/java/imgs/node_5.jpeg"));
-    node_6.setIcon(new ImageIcon("src/main/java/imgs/node_6.jpeg"));
-    node_7.setIcon(new ImageIcon("src/main/java/imgs/node_7.jpeg"));
-    node_8.setIcon(new ImageIcon("src/main/java/imgs/node_8.jpeg"));
-    node_9.setIcon(new ImageIcon("src/main/java/imgs/node_9.jpeg"));
-    node_10.setIcon(new ImageIcon("src/main/java/imgs/node_10.jpeg"));
-    node_11.setIcon(new ImageIcon("src/main/java/imgs/node_11.jpeg"));
-    node_12.setIcon(new ImageIcon("src/main/java/imgs/node_12.jpeg"));
-    node_13.setIcon(new ImageIcon("src/main/java/imgs/node_13.jpeg"));
-    node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
-    node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
-}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;

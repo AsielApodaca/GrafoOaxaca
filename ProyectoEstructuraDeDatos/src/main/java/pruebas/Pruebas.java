@@ -4,7 +4,8 @@
  */
 package pruebas;
 
-import grafoOaxaca.presentacion.FrmGrafoOaxaca;
+import grafoOaxaca.presentacion.PanelGrafoOaxaca;
+import javax.swing.JFrame;
 import negocios.algoritmosGrafos.Kruskal;
 import negocios.dominioGrafo.Grafo;
 import negocios.servicios.ImprimirGrafo;
@@ -42,36 +43,64 @@ public class Pruebas {
 //        };
         
         Grafo k = new Grafo();
-        k.agregarVertice("a");
-        k.agregarVertice("b");
-        k.agregarVertice("c");
-        k.agregarVertice("d");
-        k.agregarVertice("e");
-        k.agregarVertice("f");
-        k.agregarVertice("g");
-        k.agregarVertice("h");
-        k.agregarVertice("i");
+        k.agregarVertice("1");
+        k.agregarVertice("2");
+        k.agregarVertice("3");
+        k.agregarVertice("4");
+        k.agregarVertice("5");
+        k.agregarVertice("6");
+        k.agregarVertice("7");
+        k.agregarVertice("8");
+        k.agregarVertice("9");
+        k.agregarVertice("10");
+        k.agregarVertice("11");
+        k.agregarVertice("12");
+        k.agregarVertice("13");
+        k.agregarVertice("14");
+        k.agregarVertice("15");
         
-        k.agregarArista("a", "b", 4);
-        k.agregarArista("a", "h", 8);
-        k.agregarArista("b", "h", 11);
-        k.agregarArista("b", "c", 8);
-        k.agregarArista("c", "i", 2);
-        k.agregarArista("i", "h", 7);
-        k.agregarArista("h", "g", 1);
-        k.agregarArista("i", "g", 6);
-        k.agregarArista("g", "f", 2);
-        k.agregarArista("c", "f", 4);
-        k.agregarArista("c", "d", 7);
-        k.agregarArista("d", "f", 14);
-        k.agregarArista("d", "e", 9);
-        k.agregarArista("f", "e", 10);
+        k.agregarArista("1", "7", 4.6);
+        k.agregarArista("1", "4", 8.7);
+        k.agregarArista("1", "13", 7.2);
+        k.agregarArista("1", "15", 7.9);
+        k.agregarArista("2", "7", 215);
+        k.agregarArista("2", "6", 390);
+        k.agregarArista("2", "10", 36.6);
+        k.agregarArista("3", "5", 44.8);
+        k.agregarArista("3", "8", 28.5);
+        k.agregarArista("3", "14", 20.8);
+        k.agregarArista("4", "7", 4.6);
+        k.agregarArista("4", "13", 13);
+        k.agregarArista("4", "15", 6.8);
+        k.agregarArista("5", "8", 17);
+        k.agregarArista("5", "12", 370);
+        k.agregarArista("6", "13", 167);
+        k.agregarArista("6", "9", 286);
+        k.agregarArista("7", "15", 5.9);
+        k.agregarArista("7", "14", 255);
+        k.agregarArista("8", "15", 244);
+        k.agregarArista("8", "14", 40.8);
+        k.agregarArista("8", "12", 296);
+        k.agregarArista("9", "11", 140);
+        k.agregarArista("10", "14", 274);
+        k.agregarArista("11", "15", 188);
+        k.agregarArista("11", "12", 146);
+        k.agregarArista("12", "15", 98.9);
 
         ImprimirGrafo.imprimirMatrizAdyacencia(k.obtenerMatrizAdyacente());    
         
         Grafo arbolExpansionMinima = Kruskal.calcularArbolExpansionMinima(k);
         
         ImprimirGrafo.imprimirMatrizAdyacencia(arbolExpansionMinima);
+        
+//        JFrame frame = new JFrame("Ejemplo de JPanel");
+//        PanelGrafoOaxaca panel = new PanelGrafoOaxaca() ;
+//        frame.add(panel);
+//        frame.pack();
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setVisible(true);
+    }
+        
     }
 
-}
+
