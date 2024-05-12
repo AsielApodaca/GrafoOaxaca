@@ -1,6 +1,8 @@
 package negocios.servicios;
 
+import java.util.List;
 import negocios.dominioGrafo.Grafo;
+import negocios.dominioGrafo.Vertice;
 
 /**
  *
@@ -8,7 +10,7 @@ import negocios.dominioGrafo.Grafo;
  */
 public class ImprimirGrafo {
     public static void imprimirMatrizAdyacencia(Double[][] matrizAdyacencia) {
-        System.out.println("Matriz de Adyacencia:\n");
+        System.out.println("\nMatriz de Adyacencia:\n");
         System.out.print("       ");
         for (int i = 0; i < matrizAdyacencia.length; i++) {
             System.out.printf("%-7d", i + 1);
@@ -30,7 +32,7 @@ public class ImprimirGrafo {
     public static void imprimirMatrizAdyacencia(Grafo grafo) {
         Double[][] matrizAdyacencia = grafo.obtenerMatrizAdyacente();
         
-        System.out.println("Matriz de Adyacencia:\n");
+        System.out.println("\nMatriz de Adyacencia:\n");
         System.out.print("       ");
         for (int i = 0; i < matrizAdyacencia.length; i++) {
             System.out.printf("%-7d", i + 1);
@@ -47,5 +49,12 @@ public class ImprimirGrafo {
             }
             System.out.println();
         }
+        
+        List<Vertice> vertices = grafo.getVertices();
+        System.out.println("Dato de cada vertice:");
+        for (int i = 0; i < vertices.size(); i++) {
+            System.out.println(i + ": " + vertices.get(i).getMunicipio());
+        }
+        
     }
 }
