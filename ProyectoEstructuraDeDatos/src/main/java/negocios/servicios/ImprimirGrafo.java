@@ -53,7 +53,7 @@ public class ImprimirGrafo {
         List<Vertice> vertices = grafo.getVertices();
         System.out.println("Dato de cada vertice:");
         for (int i = 0; i < vertices.size(); i++) {
-            System.out.println(i + ": " + vertices.get(i).getMunicipio());
+            System.out.println((i + 1) + ": " + vertices.get(i).getMunicipio());
         }
         
     }
