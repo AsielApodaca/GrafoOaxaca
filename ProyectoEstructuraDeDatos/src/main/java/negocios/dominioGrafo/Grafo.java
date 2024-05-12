@@ -29,6 +29,10 @@ public class Grafo {
         return vertices;
     }
 
+    public void setVertices(List<Vertice> vertices) {
+        this.vertices = vertices;
+    }
+
     public List<Arista> getAristas() {
         return aristas;
     }
@@ -54,7 +58,7 @@ public class Grafo {
         }
     }
 
-    private Vertice encontrarVertice(String nombreMunicipio) {
+    public Vertice encontrarVertice(String nombreMunicipio) {
         for (Vertice verticeMunicipio : vertices) {
             if (verticeMunicipio.getMunicipio().equalsIgnoreCase(nombreMunicipio)) {
                 return verticeMunicipio;

@@ -10,26 +10,29 @@ import negocios.dominioGrafo.Vertice;
 
 public class Kruskal {
 
-    public Grafo calcularArbolExpansionMinima(Grafo grafo) {
+    public static Grafo calcularArbolExpansionMinima(Grafo grafo) {
         Grafo arbolExpansionMinima = new Grafo();
+        arbolExpansionMinima.setVertices(grafo.getVertices());
+        
         List<Arista> aristasOrdenadasPorPeso = new ArrayList<>(grafo.getAristas());
         Collections.sort(aristasOrdenadasPorPeso, (a1, a2) -> Double.compare(a1.getPeso(), a2.getPeso()));
+        
 
-        List<Vertice> vertices = grafo.getVertices(); // Declaración de la variable vertices
+        List<Vertice> vertices = arbolExpansionMinima.getVertices(); // Declaración de la variable vertices
 
         ConjuntoDisjunto conjuntoDisjunto = new ConjuntoDisjunto(vertices);
 
         for (Arista arista : aristasOrdenadasPorPeso) {
+            
             Vertice origen = arista.getOrigen();
             Vertice destino = arista.getDestino();
 
             if (!conjuntoDisjunto.estanConectados(origen, destino)) {
-                arbolExpansionMinima.agregarVertice(origen.getMunicipio());
-                arbolExpansionMinima.agregarVertice(destino.getMunicipio());
                 arbolExpansionMinima.agregarArista(origen.getMunicipio(), destino.getMunicipio(), arista.getPeso());
-                conjuntoDisjunto.unir(origen, destino);
+                conjuntoDisjunto.unir(arbolExpansionMinima.encontrarVertice(origen.getMunicipio()), arbolExpansionMinima.encontrarVertice(destino.getMunicipio()));
             }
         }
+        
 
         return arbolExpansionMinima;
     }
