@@ -36,8 +36,10 @@ public class Kruskal {
 
     private static class DisjointSet {
         private int[] parent;
+        private List<Vertice> vertices ;
 
         public DisjointSet(List<Vertice> vertices) {
+            this.vertices = vertices ;
             parent = new int[vertices.size()];
             for (int i = 0; i < vertices.size(); i++) {
                 parent[i] = i;
