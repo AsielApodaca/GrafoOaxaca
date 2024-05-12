@@ -5,6 +5,8 @@
 
 package pruebas;
 
+import grafoOaxaca.presentacion.FrmGrafoOaxaca;
+
 /**
  *
  * @author Asiel Apodaca Monge
@@ -15,7 +17,9 @@ public class Pruebas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        FrmGrafoOaxaca f = new FrmGrafoOaxaca() ;
+        
+        f.setVisible(true);
     }
 
 }

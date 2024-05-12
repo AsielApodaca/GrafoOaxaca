@@ -4,6 +4,8 @@
  */
 package grafoOaxaca.presentacion;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Oliver Valle
@@ -15,6 +17,8 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
      */
     public FrmGrafoOaxaca() {
         initComponents();
+        background.setIcon(new ImageIcon("src/main/java/imgs/background.jpeg"));
+        setDefaultIcons();
     }
 
     /**
@@ -26,57 +30,476 @@ public class FrmGrafoOaxaca extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        node_1 = new javax.swing.JLabel();
+        node_2 = new javax.swing.JLabel();
+        node_3 = new javax.swing.JLabel();
+        node_4 = new javax.swing.JLabel();
+        node_5 = new javax.swing.JLabel();
+        node_6 = new javax.swing.JLabel();
+        node_7 = new javax.swing.JLabel();
+        node_8 = new javax.swing.JLabel();
+        node_9 = new javax.swing.JLabel();
+        node_10 = new javax.swing.JLabel();
+        node_11 = new javax.swing.JLabel();
+        node_12 = new javax.swing.JLabel();
+        node_13 = new javax.swing.JLabel();
+        node_14 = new javax.swing.JLabel();
+        node_15 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1008, 672));
+        setPreferredSize(new java.awt.Dimension(1008, 672));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        node_1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_1MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 50, 50));
+
+        node_2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_2MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 50, 50));
+
+        node_3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_3MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 400, 50, 50));
+
+        node_4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_4MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 50, 50));
+
+        node_5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_5MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 50, 50));
+
+        node_6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_6MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 50, 50));
+
+        node_7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_7MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_7MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 50, 50));
+
+        node_8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_8MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 420, 50, 50));
+
+        node_9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_9MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_9MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 50, 50));
+
+        node_10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_10MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_10MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_10MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 70, 50, 50));
+
+        node_11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_11MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_11MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_11MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 50, 50));
+
+        node_12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_12MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_12MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 530, 50, 50));
+
+        node_13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_13MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_13MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_13MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 50, 50));
+
+        node_14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_14MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_14MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_14MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 50, 50));
+
+        node_15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                node_15MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                node_15MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                node_15MouseExited(evt);
+            }
+        });
+        getContentPane().add(node_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 50, 50));
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void node_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_1MouseClicked
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmGrafoOaxaca().setVisible(true);
-            }
-        });
-    }
+    private void node_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_2MouseClicked
+
+    private void node_1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseEntered
+        node_1.setIcon(new ImageIcon("src/main/java/imgs/node_select_1.jpeg"));
+    }//GEN-LAST:event_node_1MouseEntered
+
+    private void node_1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseExited
+        node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
+    }//GEN-LAST:event_node_1MouseExited
+
+    private void node_2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseEntered
+        node_2.setIcon(new ImageIcon("src/main/java/imgs/node_select_2.jpeg"));
+    }//GEN-LAST:event_node_2MouseEntered
+
+    private void node_2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseExited
+        node_2.setIcon(new ImageIcon("src/main/java/imgs/node_2.jpeg"));
+    }//GEN-LAST:event_node_2MouseExited
+
+    private void node_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_3MouseClicked
+
+    private void node_3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseEntered
+        node_3.setIcon(new ImageIcon("src/main/java/imgs/node_select_3.jpeg"));
+    }//GEN-LAST:event_node_3MouseEntered
+
+    private void node_3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseExited
+        node_3.setIcon(new ImageIcon("src/main/java/imgs/node_3.jpeg"));
+    }//GEN-LAST:event_node_3MouseExited
+
+    private void node_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_4MouseClicked
+
+    private void node_4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseEntered
+        node_4.setIcon(new ImageIcon("src/main/java/imgs/node_select_4.jpeg"));
+    }//GEN-LAST:event_node_4MouseEntered
+
+    private void node_4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseExited
+        node_4.setIcon(new ImageIcon("src/main/java/imgs/node_4.jpeg"));
+    }//GEN-LAST:event_node_4MouseExited
+
+    private void node_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_5MouseClicked
+
+    private void node_5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseEntered
+        node_5.setIcon(new ImageIcon("src/main/java/imgs/node_select_5.jpeg"));
+    }//GEN-LAST:event_node_5MouseEntered
+
+    private void node_5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseExited
+        node_5.setIcon(new ImageIcon("src/main/java/imgs/node_5.jpeg"));
+    }//GEN-LAST:event_node_5MouseExited
+
+    private void node_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_6MouseClicked
+
+    private void node_6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseEntered
+        node_6.setIcon(new ImageIcon("src/main/java/imgs/node_select_6.jpeg"));
+    }//GEN-LAST:event_node_6MouseEntered
+
+    private void node_6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseExited
+        node_6.setIcon(new ImageIcon("src/main/java/imgs/node_6.jpeg"));
+    }//GEN-LAST:event_node_6MouseExited
+
+    private void node_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_7MouseClicked
+
+    private void node_7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseEntered
+        node_7.setIcon(new ImageIcon("src/main/java/imgs/node_select_7.jpeg"));
+    }//GEN-LAST:event_node_7MouseEntered
+
+    private void node_7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseExited
+        node_7.setIcon(new ImageIcon("src/main/java/imgs/node_7.jpeg"));
+    }//GEN-LAST:event_node_7MouseExited
+
+    private void node_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_8MouseClicked
+
+    private void node_8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseEntered
+        node_8.setIcon(new ImageIcon("src/main/java/imgs/node_select_8.jpeg"));
+    }//GEN-LAST:event_node_8MouseEntered
+
+    private void node_8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseExited
+        node_8.setIcon(new ImageIcon("src/main/java/imgs/node_8.jpeg"));
+    }//GEN-LAST:event_node_8MouseExited
+
+    private void node_9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_9MouseClicked
+
+    private void node_9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseEntered
+        node_9.setIcon(new ImageIcon("src/main/java/imgs/node_select_9.jpeg"));
+    }//GEN-LAST:event_node_9MouseEntered
+
+    private void node_9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseExited
+        node_9.setIcon(new ImageIcon("src/main/java/imgs/node_9.jpeg"));
+    }//GEN-LAST:event_node_9MouseExited
+
+    private void node_10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_10MouseClicked
+
+    private void node_10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseEntered
+        node_10.setIcon(new ImageIcon("src/main/java/imgs/node_select_10.jpeg"));
+    }//GEN-LAST:event_node_10MouseEntered
+
+    private void node_10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseExited
+        node_10.setIcon(new ImageIcon("src/main/java/imgs/node_10.jpeg"));
+    }//GEN-LAST:event_node_10MouseExited
+
+    private void node_11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_11MouseClicked
+
+    private void node_11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseEntered
+        node_11.setIcon(new ImageIcon("src/main/java/imgs/node_select_11.jpeg"));
+    }//GEN-LAST:event_node_11MouseEntered
+
+    private void node_11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseExited
+        node_11.setIcon(new ImageIcon("src/main/java/imgs/node_11.jpeg"));
+    }//GEN-LAST:event_node_11MouseExited
+
+    private void node_12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_12MouseClicked
+
+    private void node_12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseEntered
+        node_12.setIcon(new ImageIcon("src/main/java/imgs/node_select_12.jpeg"));
+    }//GEN-LAST:event_node_12MouseEntered
+
+    private void node_12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseExited
+        node_12.setIcon(new ImageIcon("src/main/java/imgs/node_12.jpeg"));
+    }//GEN-LAST:event_node_12MouseExited
+
+    private void node_13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_13MouseClicked
+
+    private void node_13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseEntered
+        node_13.setIcon(new ImageIcon("src/main/java/imgs/node_select_13.jpeg"));
+    }//GEN-LAST:event_node_13MouseEntered
+
+    private void node_13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseExited
+        node_13.setIcon(new ImageIcon("src/main/java/imgs/node_13.jpeg"));
+    }//GEN-LAST:event_node_13MouseExited
+
+    private void node_14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_14MouseClicked
+
+    private void node_14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseEntered
+        node_14.setIcon(new ImageIcon("src/main/java/imgs/node_select_14.jpeg"));
+    }//GEN-LAST:event_node_14MouseEntered
+
+    private void node_14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseExited
+        node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
+    }//GEN-LAST:event_node_14MouseExited
+
+    private void node_15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_node_15MouseClicked
+
+    private void node_15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseEntered
+        node_15.setIcon(new ImageIcon("src/main/java/imgs/node_select_15.jpeg"));
+    }//GEN-LAST:event_node_15MouseEntered
+
+    private void node_15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseExited
+        node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
+    }//GEN-LAST:event_node_15MouseExited
+
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(FrmGrafoOaxaca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new FrmGrafoOaxaca().setVisible(true);
+//            }
+//        });
+//    }
+    
+    public void setDefaultIcons() {
+    node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
+    node_2.setIcon(new ImageIcon("src/main/java/imgs/node_2.jpeg"));
+    node_3.setIcon(new ImageIcon("src/main/java/imgs/node_3.jpeg"));
+    node_4.setIcon(new ImageIcon("src/main/java/imgs/node_4.jpeg"));
+    node_5.setIcon(new ImageIcon("src/main/java/imgs/node_5.jpeg"));
+    node_6.setIcon(new ImageIcon("src/main/java/imgs/node_6.jpeg"));
+    node_7.setIcon(new ImageIcon("src/main/java/imgs/node_7.jpeg"));
+    node_8.setIcon(new ImageIcon("src/main/java/imgs/node_8.jpeg"));
+    node_9.setIcon(new ImageIcon("src/main/java/imgs/node_9.jpeg"));
+    node_10.setIcon(new ImageIcon("src/main/java/imgs/node_10.jpeg"));
+    node_11.setIcon(new ImageIcon("src/main/java/imgs/node_11.jpeg"));
+    node_12.setIcon(new ImageIcon("src/main/java/imgs/node_12.jpeg"));
+    node_13.setIcon(new ImageIcon("src/main/java/imgs/node_13.jpeg"));
+    node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
+    node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
+    private javax.swing.JLabel node_1;
+    private javax.swing.JLabel node_10;
+    private javax.swing.JLabel node_11;
+    private javax.swing.JLabel node_12;
+    private javax.swing.JLabel node_13;
+    private javax.swing.JLabel node_14;
+    private javax.swing.JLabel node_15;
+    private javax.swing.JLabel node_2;
+    private javax.swing.JLabel node_3;
+    private javax.swing.JLabel node_4;
+    private javax.swing.JLabel node_5;
+    private javax.swing.JLabel node_6;
+    private javax.swing.JLabel node_7;
+    private javax.swing.JLabel node_8;
+    private javax.swing.JLabel node_9;
     // End of variables declaration//GEN-END:variables
 }
