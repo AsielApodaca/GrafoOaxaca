@@ -12,12 +12,12 @@ package negocios.dominioGrafo;
 public class Arista {
     private Vertice origen; // Municipio de origen
     private Vertice destino; // Municipio destino
-    private int peso; // Km de largo de camino
+    private double peso; // Km de largo de camino
 
     public Arista() {
     }
     
-    public Arista(Vertice origen, Vertice destino, int peso) {
+    public Arista(Vertice origen, Vertice destino, double peso) {
         this.origen = origen;
         this.destino = destino;
         this.peso = peso;
@@ -39,11 +39,11 @@ public class Arista {
         this.destino = destino;
     }
 
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 }

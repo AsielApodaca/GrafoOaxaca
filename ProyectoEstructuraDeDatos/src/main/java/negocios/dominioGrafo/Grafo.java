@@ -38,7 +38,7 @@ public class Grafo {
         vertices.add(new Vertice(municipio));
     }
     
-    public void agregarArista(String municipioOrigen, String municipioDestino, int peso) { // Agrega un camino entre municipios
+    public void agregarArista(String municipioOrigen, String municipioDestino, double peso) { // Agrega un camino entre municipios
         Vertice origen = encontrarVertice(municipioOrigen);
         Vertice destino = encontrarVertice(municipioDestino);
         
@@ -60,9 +60,9 @@ public class Grafo {
         return null;
     }
     
-    public Integer[][] obtenerMatrizAdyacente() {
+    public Double[][] obtenerMatrizAdyacente() {
         int largo = vertices.size();
-        Integer[][] matriz = new Integer[largo][largo];
+        Double[][] matriz = new Double[largo][largo];
         
         for(Arista aristaCamino : aristas) {
             int indexOrigen = vertices.indexOf(aristaCamino.getOrigen());

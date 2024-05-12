@@ -13,7 +13,7 @@ public class Kruskal {
     public Grafo calcularArbolExpansionMinima(Grafo grafo) {
         Grafo arbolExpansionMinima = new Grafo();
         List<Arista> aristasOrdenadasPorPeso = new ArrayList<>(grafo.getAristas());
-        Collections.sort(aristasOrdenadasPorPeso, (a1, a2) -> a1.getPeso() - a2.getPeso());
+        Collections.sort(aristasOrdenadasPorPeso, (a1, a2) -> Double.compare(a1.getPeso(), a2.getPeso()));
 
         List<Vertice> vertices = grafo.getVertices(); // Declaración de la variable vertices
 
