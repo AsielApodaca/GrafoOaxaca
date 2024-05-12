@@ -36,7 +36,7 @@ public class FrmVentana extends JFrame{
         cardPanel.setPreferredSize(new Dimension(1358, 672));
         
         // Se crean los paneles (ventanas) y se añaden los paneles al panel con CardLayout
-//        cardPanel.add(new GrafoJpanel(), "GrafoJpanel");
+        cardPanel.add(new PanelGrafoOaxaca(), "PanelGrafoOaxaca");
 //        cardPanel.add(new ArbolDeExpansionMinimaJpanel(), "ArbolDeExpansionMinimaJpanel");
 //        cardPanel.add(new RutaMasCortaJpanel(), "RutaMasCortaJpanel");
 
@@ -59,7 +59,7 @@ public class FrmVentana extends JFrame{
         btn_grafo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarVentana("GrafoJpanel");
+                mostrarVentana("PanelGrafoOaxaca");
             }
         });
         
