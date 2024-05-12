@@ -17,7 +17,7 @@ public class ImprimirGrafo {
         for (int i = 0; i < matrizAdyacencia.length; i++) {
             System.out.printf("%-3d|", i + 1);
             for (int j = 0; j < matrizAdyacencia[i].length; j++) {
-                if (matrizAdyacencia[i][j] == Double.POSITIVE_INFINITY || matrizAdyacencia[i][j] == null) {
+                if (matrizAdyacencia[i][j] == null || matrizAdyacencia[i][j] == Double.POSITIVE_INFINITY) {
                     System.out.printf("%-7s", "   /   ");
                 } else {
                     System.out.printf("%-7.1f", matrizAdyacencia[i][j]);
@@ -39,7 +39,7 @@ public class ImprimirGrafo {
         for (int i = 0; i < matrizAdyacencia.length; i++) {
             System.out.printf("%-3d|", i + 1);
             for (int j = 0; j < matrizAdyacencia[i].length; j++) {
-                if (matrizAdyacencia[i][j] == Double.POSITIVE_INFINITY || matrizAdyacencia[i][j] == null) {
+                if (matrizAdyacencia[i][j] == null || matrizAdyacencia[i][j] == Double.POSITIVE_INFINITY) {
                     System.out.printf("%-7s", "   /   ");
                 } else {
                     System.out.printf("%-7.1f", matrizAdyacencia[i][j]);
