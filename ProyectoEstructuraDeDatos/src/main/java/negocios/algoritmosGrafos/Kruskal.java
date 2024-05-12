@@ -17,28 +17,28 @@ public class Kruskal {
 
         List<Vertice> vertices = grafo.getVertices(); // Declaración de la variable vertices
 
-        DisjointSet disjointSet = new DisjointSet(vertices);
+        ConjuntoDisjunto conjuntoDisjunto = new ConjuntoDisjunto(vertices);
 
         for (Arista arista : aristasOrdenadasPorPeso) {
             Vertice origen = arista.getOrigen();
             Vertice destino = arista.getDestino();
 
-            if (!disjointSet.estanConectados(origen, destino)) {
+            if (!conjuntoDisjunto.estanConectados(origen, destino)) {
                 arbolExpansionMinima.agregarVertice(origen.getMunicipio());
                 arbolExpansionMinima.agregarVertice(destino.getMunicipio());
                 arbolExpansionMinima.agregarArista(origen.getMunicipio(), destino.getMunicipio(), arista.getPeso());
-                disjointSet.unir(origen, destino);
+                conjuntoDisjunto.unir(origen, destino);
             }
         }
 
         return arbolExpansionMinima;
     }
 
-    private static class DisjointSet {
+    private static class ConjuntoDisjunto {
         private int[] parent;
         private List<Vertice> vertices ;
 
-        public DisjointSet(List<Vertice> vertices) {
+        public ConjuntoDisjunto(List<Vertice> vertices) {
             this.vertices = vertices ;
             parent = new int[vertices.size()];
             for (int i = 0; i < vertices.size(); i++) {
