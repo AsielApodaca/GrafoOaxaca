@@ -40,6 +40,7 @@ public class FrmVentana extends JFrame{
         
         // Se crean los paneles (ventanas) y se añaden los paneles al panel con CardLayout
         cardPanel.add(new PanelGrafoOaxaca(k), "PanelGrafoOaxaca");
+        cardPanel.add(new PanelMatrizAdyacencia(), "PanelMatrizAdyacencia") ;
 //        cardPanel.add(new ArbolDeExpansionMinimaJpanel(), "ArbolDeExpansionMinimaJpanel");
 //        cardPanel.add(new RutaMasCortaJpanel(), "RutaMasCortaJpanel");
 
@@ -54,12 +55,12 @@ public class FrmVentana extends JFrame{
         buttonPanel.setBackground(Color.LIGHT_GRAY);
         
         // Botones
-        JButton btn_matriz = new JButton("Mostrar Matriz de Adyacencia");
+        JButton btn_grafo = new JButton("Mostrar grafo");
         JButton btn_arbolExpansion = new JButton("Mostrar arbol de expansión mínima");
-        JButton btn_rutaCorta = new JButton("Ruta más corta");
+        JButton btn_rutaCorta = new JButton("Mostrar Matriz de Adyacencia");
         JButton btn_salir = new JButton("Salir");
         
-        btn_matriz.addActionListener(new ActionListener() {
+        btn_grafo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarVentana("PanelGrafoOaxaca");
@@ -76,7 +77,7 @@ public class FrmVentana extends JFrame{
         btn_rutaCorta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarVentana("RutaMasCortaJpanel");
+                mostrarVentana("PanelMatrizAdyacencia");
             }
         });
         
@@ -89,7 +90,7 @@ public class FrmVentana extends JFrame{
         
         // Añadir botones al panel con espacios en blanco entre ellos
         buttonPanel.add(Box.createHorizontalGlue());
-        buttonPanel.add(btn_matriz);
+        buttonPanel.add(btn_grafo);
         buttonPanel.add(Box.createHorizontalGlue());
         buttonPanel.add(btn_arbolExpansion);
         buttonPanel.add(Box.createHorizontalGlue());
@@ -98,7 +99,7 @@ public class FrmVentana extends JFrame{
         buttonPanel.add(btn_salir);
         buttonPanel.add(Box.createHorizontalGlue());
         
-        btn_matriz.setVisible(true);
+        btn_grafo.setVisible(true);
         btn_arbolExpansion.setVisible(true);
         btn_rutaCorta.setVisible(true);
         btn_salir.setVisible(true);
