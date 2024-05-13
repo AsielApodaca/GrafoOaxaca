@@ -159,7 +159,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
 
         lblDistancia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblDistancia.setText("DISTANCIA:");
-        add(lblDistancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 150, 30));
+        add(lblDistancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 460, 30));
 
         btnReiniciar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnReiniciar.setText("Reiniciar Ruta");
