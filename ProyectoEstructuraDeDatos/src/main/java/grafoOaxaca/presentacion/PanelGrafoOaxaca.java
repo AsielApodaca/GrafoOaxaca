@@ -135,8 +135,26 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
         node_14 = new javax.swing.JLabel();
         node_15 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
+        lblMunicipios = new javax.swing.JLabel();
+        municipio1 = new javax.swing.JLabel();
+        municipio2 = new javax.swing.JLabel();
+        municipio3 = new javax.swing.JLabel();
+        municipio4 = new javax.swing.JLabel();
+        municipio5 = new javax.swing.JLabel();
+        municipio6 = new javax.swing.JLabel();
+        municipio7 = new javax.swing.JLabel();
+        municipio8 = new javax.swing.JLabel();
+        municipio9 = new javax.swing.JLabel();
+        municipio10 = new javax.swing.JLabel();
+        municipio11 = new javax.swing.JLabel();
+        municipio12 = new javax.swing.JLabel();
+        municipio13 = new javax.swing.JLabel();
+        municipio14 = new javax.swing.JLabel();
+        municipio15 = new javax.swing.JLabel();
+        lblDescripcion = new javax.swing.JLabel();
 
-        setMinimumSize(new java.awt.Dimension(1008, 672));
+        setMinimumSize(new java.awt.Dimension(1358, 672));
+        setPreferredSize(new java.awt.Dimension(1358, 672));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDistancia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -351,6 +369,73 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
         });
         add(node_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 50, 50));
         add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1008, 672));
+
+        lblMunicipios.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblMunicipios.setText("MUNICIPIOS:");
+        add(lblMunicipios, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 50, 220, 50));
+
+        municipio1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio1.setText("15. San Antonio de la Cal");
+        add(municipio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 580, 220, 20));
+
+        municipio2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio2.setText("1. Oaxaca");
+        add(municipio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 160, 220, 20));
+
+        municipio3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio3.setText("2. San Juan Bautista Tuxtepec");
+        add(municipio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 190, 220, 20));
+
+        municipio4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio4.setText("3. Heroica Ciudad de Juchitán de Zaragoza");
+        add(municipio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 220, 320, 20));
+
+        municipio5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio5.setText("4. Santa Cruz Xoxocotlán");
+        add(municipio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 250, 220, 20));
+
+        municipio6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio6.setText("5. Salina Cruz");
+        add(municipio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 280, 220, 20));
+
+        municipio7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio7.setText("6. Heroica Ciudad de Huajapan de León");
+        add(municipio7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 310, 300, 20));
+
+        municipio8.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio8.setText("7. Santa Lucía del Camino");
+        add(municipio8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 340, 220, 20));
+
+        municipio9.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio9.setText("8. Santo Domingo Tehuantepec");
+        add(municipio9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 370, 230, 20));
+
+        municipio10.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio10.setText("9. Santiago Pinotepa Nacional");
+        add(municipio10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 400, 220, 20));
+
+        municipio11.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio11.setText("10. Loma Bonita");
+        add(municipio11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 430, 220, 20));
+
+        municipio12.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio12.setText("11. Puerto Escondido");
+        add(municipio12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 460, 220, 20));
+
+        municipio13.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio13.setText("12. Miahuatlán de Porfirio Díaz");
+        add(municipio13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 490, 220, 20));
+
+        municipio14.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio14.setText("13. Santa María Atzompa");
+        add(municipio14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 520, 220, 20));
+
+        municipio15.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        municipio15.setText("14. Ciudad Ixtepec");
+        add(municipio15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 550, 220, 20));
+
+        lblDescripcion.setText("(Ordenados por Población)");
+        add(lblDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 100, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void node_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseClicked
@@ -771,8 +856,25 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btnReiniciar;
+    private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblDistancia;
+    private javax.swing.JLabel lblMunicipios;
     private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel municipio1;
+    private javax.swing.JLabel municipio10;
+    private javax.swing.JLabel municipio11;
+    private javax.swing.JLabel municipio12;
+    private javax.swing.JLabel municipio13;
+    private javax.swing.JLabel municipio14;
+    private javax.swing.JLabel municipio15;
+    private javax.swing.JLabel municipio2;
+    private javax.swing.JLabel municipio3;
+    private javax.swing.JLabel municipio4;
+    private javax.swing.JLabel municipio5;
+    private javax.swing.JLabel municipio6;
+    private javax.swing.JLabel municipio7;
+    private javax.swing.JLabel municipio8;
+    private javax.swing.JLabel municipio9;
     private javax.swing.JLabel node_1;
     private javax.swing.JLabel node_10;
     private javax.swing.JLabel node_11;

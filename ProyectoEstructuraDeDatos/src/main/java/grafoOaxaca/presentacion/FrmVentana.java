@@ -54,12 +54,12 @@ public class FrmVentana extends JFrame{
         buttonPanel.setBackground(Color.LIGHT_GRAY);
         
         // Botones
-        JButton btn_grafo = new JButton("Mostrar grafo");
+        JButton btn_matriz = new JButton("Mostrar Matriz de Adyacencia");
         JButton btn_arbolExpansion = new JButton("Mostrar arbol de expansión mínima");
         JButton btn_rutaCorta = new JButton("Ruta más corta");
         JButton btn_salir = new JButton("Salir");
         
-        btn_grafo.addActionListener(new ActionListener() {
+        btn_matriz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarVentana("PanelGrafoOaxaca");
@@ -89,7 +89,7 @@ public class FrmVentana extends JFrame{
         
         // Añadir botones al panel con espacios en blanco entre ellos
         buttonPanel.add(Box.createHorizontalGlue());
-        buttonPanel.add(btn_grafo);
+        buttonPanel.add(btn_matriz);
         buttonPanel.add(Box.createHorizontalGlue());
         buttonPanel.add(btn_arbolExpansion);
         buttonPanel.add(Box.createHorizontalGlue());
@@ -98,7 +98,7 @@ public class FrmVentana extends JFrame{
         buttonPanel.add(btn_salir);
         buttonPanel.add(Box.createHorizontalGlue());
         
-        btn_grafo.setVisible(true);
+        btn_matriz.setVisible(true);
         btn_arbolExpansion.setVisible(true);
         btn_rutaCorta.setVisible(true);
         btn_salir.setVisible(true);
