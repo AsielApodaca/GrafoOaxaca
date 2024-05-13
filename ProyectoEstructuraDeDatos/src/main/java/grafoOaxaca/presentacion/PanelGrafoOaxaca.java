@@ -5,13 +5,16 @@
 package grafoOaxaca.presentacion;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Oliver Valle
  */
 public class PanelGrafoOaxaca extends javax.swing.JPanel {
-
+    
+    private int inicio = 0 ;
+    private int fin = 0 ;
     /**
      * Creates new form PanelGrafoOaxaca
      */
@@ -47,6 +50,8 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnReiniciar = new javax.swing.JButton();
+        lblTitulo = new javax.swing.JLabel();
         node_1 = new javax.swing.JLabel();
         node_2 = new javax.swing.JLabel();
         node_3 = new javax.swing.JLabel();
@@ -66,6 +71,19 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
 
         setMinimumSize(new java.awt.Dimension(1008, 672));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnReiniciar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnReiniciar.setText("Reiniciar Ruta");
+        btnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReiniciarActionPerformed(evt);
+            }
+        });
+        add(btnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 30, 130, 50));
+
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblTitulo.setText("RUTA MÁS CORTA");
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 300, 60));
 
         node_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -265,188 +283,406 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void node_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 1 ;
+            node_1.setIcon(new ImageIcon("src/main/java/imgs/node_start_1.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 1) {
+                fin = 1 ;
+                node_1.setIcon(new ImageIcon("src/main/java/imgs/node_end_1.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_1MouseClicked
 
     private void node_1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseEntered
-        node_1.setIcon(new ImageIcon("src/main/java/imgs/node_select_1.jpeg"));
+        if((inicio != 1 && fin != 1) || (inicio != 1 && fin == 0) || (inicio == 0&& fin != 1)) {
+            node_1.setIcon(new ImageIcon("src/main/java/imgs/node_select_1.jpeg"));
+        }
     }//GEN-LAST:event_node_1MouseEntered
 
     private void node_1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseExited
-        node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
+        if((inicio != 1 && fin != 1) || (inicio != 1 && fin == 0) || (inicio == 0&& fin != 1)) {
+            node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
+        }
     }//GEN-LAST:event_node_1MouseExited
 
     private void node_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 2 ;
+            node_2.setIcon(new ImageIcon("src/main/java/imgs/node_start_2.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 2) {
+                fin = 2 ;
+                node_2.setIcon(new ImageIcon("src/main/java/imgs/node_end_2.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_2MouseClicked
 
     private void node_2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseEntered
-        node_2.setIcon(new ImageIcon("src/main/java/imgs/node_select_2.jpeg"));
+        if((inicio != 2 && fin != 2) || (inicio != 2 && fin == 0) || (inicio == 0&& fin != 2)) {
+            node_2.setIcon(new ImageIcon("src/main/java/imgs/node_select_2.jpeg"));
+        }
     }//GEN-LAST:event_node_2MouseEntered
 
     private void node_2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseExited
-        node_2.setIcon(new ImageIcon("src/main/java/imgs/node_2.jpeg"));
+        if((inicio != 2 && fin != 2) || (inicio != 2 && fin == 0) || (inicio == 0&& fin != 2)) {
+            node_2.setIcon(new ImageIcon("src/main/java/imgs/node_2.jpeg"));
+        }
     }//GEN-LAST:event_node_2MouseExited
 
     private void node_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 3 ;
+            node_3.setIcon(new ImageIcon("src/main/java/imgs/node_start_3.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 3) {
+                fin = 3 ;
+                node_3.setIcon(new ImageIcon("src/main/java/imgs/node_end_3.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_3MouseClicked
 
     private void node_3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseEntered
-        node_3.setIcon(new ImageIcon("src/main/java/imgs/node_select_3.jpeg"));
+        if((inicio != 3 && fin != 3) || (inicio != 3 && fin == 0) || (inicio == 0&& fin != 3)) {
+            node_3.setIcon(new ImageIcon("src/main/java/imgs/node_select_3.jpeg"));
+        }
     }//GEN-LAST:event_node_3MouseEntered
 
     private void node_3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseExited
-        node_3.setIcon(new ImageIcon("src/main/java/imgs/node_3.jpeg"));
+        if((inicio != 3 && fin != 3) || (inicio != 3 && fin == 0) || (inicio == 0&& fin != 3)) {
+            node_3.setIcon(new ImageIcon("src/main/java/imgs/node_3.jpeg"));
+        }
     }//GEN-LAST:event_node_3MouseExited
 
     private void node_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 4 ;
+            node_4.setIcon(new ImageIcon("src/main/java/imgs/node_start_4.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 4) {
+                fin = 4 ;
+                node_4.setIcon(new ImageIcon("src/main/java/imgs/node_end_4.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_4MouseClicked
 
     private void node_4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseEntered
-        node_4.setIcon(new ImageIcon("src/main/java/imgs/node_select_4.jpeg"));
+        if((inicio != 4 && fin != 4) || (inicio != 4 && fin == 0) || (inicio == 0&& fin != 4)) {
+            node_4.setIcon(new ImageIcon("src/main/java/imgs/node_select_4.jpeg"));
+        }
     }//GEN-LAST:event_node_4MouseEntered
 
     private void node_4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseExited
-        node_4.setIcon(new ImageIcon("src/main/java/imgs/node_4.jpeg"));
+        if((inicio != 4 && fin != 4) || (inicio != 4 && fin == 0) || (inicio == 0&& fin != 4)) {
+            node_4.setIcon(new ImageIcon("src/main/java/imgs/node_4.jpeg"));
+        }
     }//GEN-LAST:event_node_4MouseExited
 
     private void node_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 5 ;
+            node_5.setIcon(new ImageIcon("src/main/java/imgs/node_start_5.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 5) {
+                fin = 5 ;
+                node_5.setIcon(new ImageIcon("src/main/java/imgs/node_end_5.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_5MouseClicked
 
     private void node_5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseEntered
-        node_5.setIcon(new ImageIcon("src/main/java/imgs/node_select_5.jpeg"));
+        if((inicio != 5 && fin != 5) || (inicio != 5 && fin == 0) || (inicio == 0&& fin != 5)) {
+            node_5.setIcon(new ImageIcon("src/main/java/imgs/node_select_5.jpeg"));
+        }
     }//GEN-LAST:event_node_5MouseEntered
 
     private void node_5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseExited
-        node_5.setIcon(new ImageIcon("src/main/java/imgs/node_5.jpeg"));
+        if((inicio != 5 && fin != 5) || (inicio != 5 && fin == 0) || (inicio == 0&& fin != 5)) {
+            node_5.setIcon(new ImageIcon("src/main/java/imgs/node_5.jpeg"));
+        }
     }//GEN-LAST:event_node_5MouseExited
 
     private void node_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 6 ;
+            node_6.setIcon(new ImageIcon("src/main/java/imgs/node_start_6.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 6) {
+                fin = 6 ;
+                node_6.setIcon(new ImageIcon("src/main/java/imgs/node_end_6.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_6MouseClicked
 
     private void node_6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseEntered
-        node_6.setIcon(new ImageIcon("src/main/java/imgs/node_select_6.jpeg"));
+        if((inicio != 6 && fin != 6) || (inicio != 6 && fin == 0) || (inicio == 0&& fin != 6)) {
+            node_6.setIcon(new ImageIcon("src/main/java/imgs/node_select_6.jpeg"));
+        }
     }//GEN-LAST:event_node_6MouseEntered
 
     private void node_6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseExited
-        node_6.setIcon(new ImageIcon("src/main/java/imgs/node_6.jpeg"));
+        if((inicio != 6 && fin != 6) || (inicio != 6 && fin == 0) || (inicio == 0&& fin != 6)) {
+            node_6.setIcon(new ImageIcon("src/main/java/imgs/node_6.jpeg"));
+        }
     }//GEN-LAST:event_node_6MouseExited
 
     private void node_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 7 ;
+            node_7.setIcon(new ImageIcon("src/main/java/imgs/node_start_7.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 7) {
+                fin = 7 ;
+                node_7.setIcon(new ImageIcon("src/main/java/imgs/node_end_7.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_7MouseClicked
 
     private void node_7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseEntered
-        node_7.setIcon(new ImageIcon("src/main/java/imgs/node_select_7.jpeg"));
+        if((inicio != 7 && fin != 7) || (inicio != 7 && fin == 0) || (inicio == 0&& fin != 7)) {
+            node_7.setIcon(new ImageIcon("src/main/java/imgs/node_select_7.jpeg"));
+        }
     }//GEN-LAST:event_node_7MouseEntered
 
     private void node_7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseExited
-        node_7.setIcon(new ImageIcon("src/main/java/imgs/node_7.jpeg"));
+        if((inicio != 7 && fin != 7) || (inicio != 7 && fin == 0) || (inicio == 0&& fin != 7)) {
+            node_7.setIcon(new ImageIcon("src/main/java/imgs/node_7.jpeg"));
+        }
     }//GEN-LAST:event_node_7MouseExited
 
     private void node_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 8 ;
+            node_8.setIcon(new ImageIcon("src/main/java/imgs/node_start_8.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 8) {
+                fin = 8 ;
+                node_8.setIcon(new ImageIcon("src/main/java/imgs/node_end_8.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_8MouseClicked
 
     private void node_8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseEntered
-        node_8.setIcon(new ImageIcon("src/main/java/imgs/node_select_8.jpeg"));
+        if((inicio != 8 && fin != 8) || (inicio != 8 && fin == 0) || (inicio == 0&& fin != 8)) {
+            node_8.setIcon(new ImageIcon("src/main/java/imgs/node_select_8.jpeg"));
+        }
     }//GEN-LAST:event_node_8MouseEntered
 
     private void node_8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseExited
-        node_8.setIcon(new ImageIcon("src/main/java/imgs/node_8.jpeg"));
+        if((inicio != 8 && fin != 8) || (inicio != 8 && fin == 0) || (inicio == 0&& fin != 8)) {
+            node_8.setIcon(new ImageIcon("src/main/java/imgs/node_8.jpeg"));
+        }
     }//GEN-LAST:event_node_8MouseExited
 
     private void node_9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 9 ;
+            node_9.setIcon(new ImageIcon("src/main/java/imgs/node_start_9.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 9) {
+                fin = 9 ;
+                node_9.setIcon(new ImageIcon("src/main/java/imgs/node_end_9.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_9MouseClicked
 
     private void node_9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseEntered
-        node_9.setIcon(new ImageIcon("src/main/java/imgs/node_select_9.jpeg"));
+        if((inicio != 9 && fin != 9) || (inicio != 9 && fin == 0) || (inicio == 0&& fin != 9)) {
+            node_9.setIcon(new ImageIcon("src/main/java/imgs/node_select_9.jpeg"));
+        }
     }//GEN-LAST:event_node_9MouseEntered
 
     private void node_9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseExited
-        node_9.setIcon(new ImageIcon("src/main/java/imgs/node_9.jpeg"));
+        if((inicio != 9 && fin != 9) || (inicio != 9 && fin == 0) || (inicio == 0&& fin != 9)) {
+            node_9.setIcon(new ImageIcon("src/main/java/imgs/node_9.jpeg"));
+        }
     }//GEN-LAST:event_node_9MouseExited
 
     private void node_10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 10 ;
+            node_10.setIcon(new ImageIcon("src/main/java/imgs/node_start_10.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 10) {
+                fin = 10 ;
+                node_10.setIcon(new ImageIcon("src/main/java/imgs/node_end_10.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_10MouseClicked
 
     private void node_10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseEntered
-        node_10.setIcon(new ImageIcon("src/main/java/imgs/node_select_10.jpeg"));
+        if((inicio != 10 && fin != 10) || (inicio != 10 && fin == 0) || (inicio == 0&& fin != 10)) {
+            node_10.setIcon(new ImageIcon("src/main/java/imgs/node_select_10.jpeg"));
+        }
     }//GEN-LAST:event_node_10MouseEntered
 
     private void node_10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseExited
-        node_10.setIcon(new ImageIcon("src/main/java/imgs/node_10.jpeg"));
+        if((inicio != 10 && fin != 10) || (inicio != 10 && fin == 0) || (inicio == 0&& fin != 10)) {
+            node_10.setIcon(new ImageIcon("src/main/java/imgs/node_10.jpeg"));
+        }
     }//GEN-LAST:event_node_10MouseExited
 
     private void node_11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 11 ;
+            node_11.setIcon(new ImageIcon("src/main/java/imgs/node_start_11.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 11) {
+                fin = 11 ;
+                node_11.setIcon(new ImageIcon("src/main/java/imgs/node_end_11.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_11MouseClicked
 
     private void node_11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseEntered
-        node_11.setIcon(new ImageIcon("src/main/java/imgs/node_select_11.jpeg"));
+        if((inicio != 11 && fin != 11) || (inicio != 11 && fin == 0) || (inicio == 0&& fin != 11)) {
+            node_11.setIcon(new ImageIcon("src/main/java/imgs/node_select_11.jpeg"));
+        }
     }//GEN-LAST:event_node_11MouseEntered
 
     private void node_11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseExited
-        node_11.setIcon(new ImageIcon("src/main/java/imgs/node_11.jpeg"));
+        if((inicio != 11 && fin != 11) || (inicio != 11 && fin == 0) || (inicio == 0&& fin != 11)) {
+            node_11.setIcon(new ImageIcon("src/main/java/imgs/node_11.jpeg"));
+        }
     }//GEN-LAST:event_node_11MouseExited
 
     private void node_12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 12 ;
+            node_12.setIcon(new ImageIcon("src/main/java/imgs/node_start_12.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 12) {
+                fin = 12 ;
+                node_12.setIcon(new ImageIcon("src/main/java/imgs/node_end_12.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_12MouseClicked
 
     private void node_12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseEntered
-        node_12.setIcon(new ImageIcon("src/main/java/imgs/node_select_12.jpeg"));
+        if((inicio != 12 && fin != 12) || (inicio != 12 && fin == 0) || (inicio == 0&& fin != 12)) {
+            node_12.setIcon(new ImageIcon("src/main/java/imgs/node_select_12.jpeg"));
+        }
     }//GEN-LAST:event_node_12MouseEntered
 
     private void node_12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseExited
-        node_12.setIcon(new ImageIcon("src/main/java/imgs/node_12.jpeg"));
+        if((inicio != 12 && fin != 12) || (inicio != 12 && fin == 0) || (inicio == 0&& fin != 12)) {
+            node_12.setIcon(new ImageIcon("src/main/java/imgs/node_12.jpeg"));
+        }
     }//GEN-LAST:event_node_12MouseExited
 
     private void node_13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 13 ;
+            node_13.setIcon(new ImageIcon("src/main/java/imgs/node_start_13.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 13) {
+                fin = 13 ;
+                node_13.setIcon(new ImageIcon("src/main/java/imgs/node_end_13.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_13MouseClicked
 
     private void node_13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseEntered
-        node_13.setIcon(new ImageIcon("src/main/java/imgs/node_select_13.jpeg"));
+        if((inicio != 13 && fin != 13) || (inicio != 13 && fin == 0) || (inicio == 0&& fin != 13)) {
+            node_13.setIcon(new ImageIcon("src/main/java/imgs/node_select_13.jpeg"));
+        }
     }//GEN-LAST:event_node_13MouseEntered
 
     private void node_13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseExited
-        node_13.setIcon(new ImageIcon("src/main/java/imgs/node_13.jpeg"));
+        if((inicio != 13 && fin != 13) || (inicio != 13 && fin == 0) || (inicio == 0&& fin != 13)) {
+            node_13.setIcon(new ImageIcon("src/main/java/imgs/node_13.jpeg"));
+        }
     }//GEN-LAST:event_node_13MouseExited
 
     private void node_14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 14 ;
+            node_14.setIcon(new ImageIcon("src/main/java/imgs/node_start_14.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 14) {
+                fin = 14 ;
+                node_14.setIcon(new ImageIcon("src/main/java/imgs/node_end_14.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_14MouseClicked
 
     private void node_14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseEntered
-        node_14.setIcon(new ImageIcon("src/main/java/imgs/node_select_14.jpeg"));
+        if((inicio != 14 && fin != 14) || (inicio != 14 && fin == 0) || (inicio == 0&& fin != 14)) {
+            node_14.setIcon(new ImageIcon("src/main/java/imgs/node_select_14.jpeg"));
+        }
     }//GEN-LAST:event_node_14MouseEntered
 
     private void node_14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseExited
-        node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
+        if((inicio != 14 && fin != 14) || (inicio != 14 && fin == 0) || (inicio == 0&& fin != 14)) {
+            node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
+        }
     }//GEN-LAST:event_node_14MouseExited
 
     private void node_15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseClicked
-        // TODO add your handling code here:
+        if (inicio == 0) {
+            inicio = 15 ;
+            node_15.setIcon(new ImageIcon("src/main/java/imgs/node_start_15.jpeg"));
+        } else if(fin == 0) {
+            if(inicio != 15) {
+                fin = 15 ;
+                node_15.setIcon(new ImageIcon("src/main/java/imgs/node_end_15.jpeg"));
+            } else {
+                JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
+            }
+        }
     }//GEN-LAST:event_node_15MouseClicked
 
     private void node_15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseEntered
-        node_15.setIcon(new ImageIcon("src/main/java/imgs/node_select_15.jpeg"));
+        if((inicio != 15 && fin != 15) || (inicio != 15 && fin == 0) || (inicio == 0&& fin != 15)) {
+            node_15.setIcon(new ImageIcon("src/main/java/imgs/node_select_15.jpeg"));
+        }
     }//GEN-LAST:event_node_15MouseEntered
 
     private void node_15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseExited
-        node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
+        if((inicio != 15 && fin != 15) || (inicio != 15 && fin == 0) || (inicio == 0&& fin != 15)) {
+            node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
+        }
     }//GEN-LAST:event_node_15MouseExited
+
+    private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
+        setDefaultIcons() ;
+        inicio = 0 ;
+        fin = 0 ;
+    }//GEN-LAST:event_btnReiniciarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
+    private javax.swing.JButton btnReiniciar;
+    private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel node_1;
     private javax.swing.JLabel node_10;
     private javax.swing.JLabel node_11;
