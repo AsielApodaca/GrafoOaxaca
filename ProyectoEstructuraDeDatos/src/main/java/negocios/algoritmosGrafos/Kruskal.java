@@ -40,7 +40,7 @@ public class Kruskal {
 
         return arbolExpansionMinima;
     }
-
+    
     public static List<Arista> eliminarAristasDuplicadas(List<Arista> aristas) {
         List<Arista> aristasSinDuplicados = new ArrayList<>();
         Set<Arista> aristasProcesadas = new HashSet<>();
