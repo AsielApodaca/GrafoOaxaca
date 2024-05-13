@@ -4,8 +4,13 @@
  */
 package grafoOaxaca.presentacion;
 
+import java.util.LinkedList;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import negocios.dominioGrafo.Arista;
+import negocios.dominioGrafo.Grafo;
+import negocios.dominioGrafo.Vertice;
 
 /**
  *
@@ -15,11 +20,14 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     
     private int inicio = 0 ;
     private int fin = 0 ;
+    private Grafo grafo ;
+    List<Vertice> camino = new LinkedList() ;
     /**
      * Creates new form PanelGrafoOaxaca
      */
-    public PanelGrafoOaxaca() {
+    public PanelGrafoOaxaca(Grafo grafo) {
         initComponents();
+        this.grafo = grafo ;
         background.setIcon(new ImageIcon("src/main/java/imgs/background.jpeg"));
         setDefaultIcons();
     }
@@ -41,6 +49,64 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
         node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
         node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
     }
+    
+    public void setCamino() {
+        String stringInicio = String.valueOf(inicio) ;
+        String stringFin = String.valueOf(fin) ;
+        Vertice origen = grafo.encontrarVertice(stringInicio);
+        Vertice destino = grafo.encontrarVertice(stringFin);
+        camino = grafo.dijkstra(origen, destino) ;
+        List<Arista> caminoAristas = grafo.caminoAristas(camino) ;
+        lblDistancia.setText(lblDistancia.getText() + " " + grafo.distancia(caminoAristas) + "km");
+        camino.remove(0) ;
+        camino.remove(camino.size() - 1) ;
+        
+        if (camino.contains(grafo.encontrarVertice("1"))) {
+            node_1.setIcon(new ImageIcon("src/main/java/imgs/node_mid_1.jpeg"));
+        } 
+        if(camino.contains(grafo.encontrarVertice("2"))) {
+            node_2.setIcon(new ImageIcon("src/main/java/imgs/node_mid_2.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("3"))) {
+            node_3.setIcon(new ImageIcon("src/main/java/imgs/node_mid_3.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("4"))) {
+            node_4.setIcon(new ImageIcon("src/main/java/imgs/node_mid_4.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("5"))) {
+            node_5.setIcon(new ImageIcon("src/main/java/imgs/node_mid_5.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("6"))) {
+            node_6.setIcon(new ImageIcon("src/main/java/imgs/node_mid_6.jpeg"));
+        } 
+        if(camino.contains(grafo.encontrarVertice("7"))) {
+            node_7.setIcon(new ImageIcon("src/main/java/imgs/node_mid_7.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("8"))) {
+            node_8.setIcon(new ImageIcon("src/main/java/imgs/node_mid_8.jpeg"));
+        } 
+        if(camino.contains(grafo.encontrarVertice("9"))) {
+            node_9.setIcon(new ImageIcon("src/main/java/imgs/node_mid_9.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("10"))) {
+            node_10.setIcon(new ImageIcon("src/main/java/imgs/node_mid_10.jpeg"));
+        } 
+        if(camino.contains(grafo.encontrarVertice("11"))) {
+            node_11.setIcon(new ImageIcon("src/main/java/imgs/node_mid_11.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("12"))) {
+            node_12.setIcon(new ImageIcon("src/main/java/imgs/node_mid_12.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("13"))) {
+            node_13.setIcon(new ImageIcon("src/main/java/imgs/node_mid_13.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("14"))) {
+            node_14.setIcon(new ImageIcon("src/main/java/imgs/node_mid_14.jpeg"));
+        }
+        if(camino.contains(grafo.encontrarVertice("15"))) {
+            node_15.setIcon(new ImageIcon("src/main/java/imgs/node_mid_15.jpeg"));
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,6 +116,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblDistancia = new javax.swing.JLabel();
         btnReiniciar = new javax.swing.JButton();
         lblTitulo = new javax.swing.JLabel();
         node_1 = new javax.swing.JLabel();
@@ -71,6 +138,10 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
 
         setMinimumSize(new java.awt.Dimension(1008, 672));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblDistancia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDistancia.setText("DISTANCIA:");
+        add(lblDistancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 150, 30));
 
         btnReiniciar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnReiniciar.setText("Reiniciar Ruta");
@@ -290,6 +361,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 1) {
                 fin = 1 ;
                 node_1.setIcon(new ImageIcon("src/main/java/imgs/node_end_1.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -297,13 +369,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_1MouseClicked
 
     private void node_1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseEntered
-        if((inicio != 1 && fin != 1) || (inicio != 1 && fin == 0) || (inicio == 0&& fin != 1)) {
+        if((inicio != 1 && fin == 0) || (inicio == 0&& fin != 1) || ((inicio != 1 && fin != 1) && !camino.contains((grafo.encontrarVertice("1"))))) {
             node_1.setIcon(new ImageIcon("src/main/java/imgs/node_select_1.jpeg"));
         }
     }//GEN-LAST:event_node_1MouseEntered
 
     private void node_1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseExited
-        if((inicio != 1 && fin != 1) || (inicio != 1 && fin == 0) || (inicio == 0&& fin != 1)) {
+        if((inicio != 1 && fin == 0) || (inicio == 0&& fin != 1) || ((inicio != 1 && fin != 1) && !camino.contains((grafo.encontrarVertice("1"))))) {
             node_1.setIcon(new ImageIcon("src/main/java/imgs/node_1.jpeg"));
         }
     }//GEN-LAST:event_node_1MouseExited
@@ -316,6 +388,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 2) {
                 fin = 2 ;
                 node_2.setIcon(new ImageIcon("src/main/java/imgs/node_end_2.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -323,13 +396,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_2MouseClicked
 
     private void node_2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseEntered
-        if((inicio != 2 && fin != 2) || (inicio != 2 && fin == 0) || (inicio == 0&& fin != 2)) {
+        if((inicio != 2 && fin == 0) || (inicio == 0&& fin != 2) || ((inicio != 2 && fin != 2) && !camino.contains((grafo.encontrarVertice("2"))))) {
             node_2.setIcon(new ImageIcon("src/main/java/imgs/node_select_2.jpeg"));
         }
     }//GEN-LAST:event_node_2MouseEntered
 
     private void node_2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_2MouseExited
-        if((inicio != 2 && fin != 2) || (inicio != 2 && fin == 0) || (inicio == 0&& fin != 2)) {
+        if((inicio != 2 && fin == 0) || (inicio == 0&& fin != 2) || ((inicio != 2 && fin != 2) && !camino.contains((grafo.encontrarVertice("2"))))) {
             node_2.setIcon(new ImageIcon("src/main/java/imgs/node_2.jpeg"));
         }
     }//GEN-LAST:event_node_2MouseExited
@@ -342,6 +415,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 3) {
                 fin = 3 ;
                 node_3.setIcon(new ImageIcon("src/main/java/imgs/node_end_3.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -349,13 +423,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_3MouseClicked
 
     private void node_3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseEntered
-        if((inicio != 3 && fin != 3) || (inicio != 3 && fin == 0) || (inicio == 0&& fin != 3)) {
+        if((inicio != 3 && fin == 0) || (inicio == 0&& fin != 3) || ((inicio != 3 && fin != 3) && !camino.contains((grafo.encontrarVertice("3"))))) {
             node_3.setIcon(new ImageIcon("src/main/java/imgs/node_select_3.jpeg"));
         }
     }//GEN-LAST:event_node_3MouseEntered
 
     private void node_3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_3MouseExited
-        if((inicio != 3 && fin != 3) || (inicio != 3 && fin == 0) || (inicio == 0&& fin != 3)) {
+        if((inicio != 3 && fin == 0) || (inicio == 0&& fin != 3) || ((inicio != 3 && fin != 3) && !camino.contains((grafo.encontrarVertice("3"))))) {
             node_3.setIcon(new ImageIcon("src/main/java/imgs/node_3.jpeg"));
         }
     }//GEN-LAST:event_node_3MouseExited
@@ -368,6 +442,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 4) {
                 fin = 4 ;
                 node_4.setIcon(new ImageIcon("src/main/java/imgs/node_end_4.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -375,13 +450,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_4MouseClicked
 
     private void node_4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseEntered
-        if((inicio != 4 && fin != 4) || (inicio != 4 && fin == 0) || (inicio == 0&& fin != 4)) {
+        if((inicio != 4 && fin == 0) || (inicio == 0&& fin != 4) || ((inicio != 4 && fin != 4) && !camino.contains((grafo.encontrarVertice("4"))))) {
             node_4.setIcon(new ImageIcon("src/main/java/imgs/node_select_4.jpeg"));
         }
     }//GEN-LAST:event_node_4MouseEntered
 
     private void node_4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_4MouseExited
-        if((inicio != 4 && fin != 4) || (inicio != 4 && fin == 0) || (inicio == 0&& fin != 4)) {
+        if((inicio != 4 && fin == 0) || (inicio == 0&& fin != 4) || ((inicio != 4 && fin != 4) && !camino.contains((grafo.encontrarVertice("4"))))) {
             node_4.setIcon(new ImageIcon("src/main/java/imgs/node_4.jpeg"));
         }
     }//GEN-LAST:event_node_4MouseExited
@@ -394,6 +469,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 5) {
                 fin = 5 ;
                 node_5.setIcon(new ImageIcon("src/main/java/imgs/node_end_5.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -401,13 +477,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_5MouseClicked
 
     private void node_5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseEntered
-        if((inicio != 5 && fin != 5) || (inicio != 5 && fin == 0) || (inicio == 0&& fin != 5)) {
+        if((inicio != 5 && fin == 0) || (inicio == 0&& fin != 5) || ((inicio != 5 && fin != 5) && !camino.contains((grafo.encontrarVertice("5"))))) {
             node_5.setIcon(new ImageIcon("src/main/java/imgs/node_select_5.jpeg"));
         }
     }//GEN-LAST:event_node_5MouseEntered
 
     private void node_5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_5MouseExited
-        if((inicio != 5 && fin != 5) || (inicio != 5 && fin == 0) || (inicio == 0&& fin != 5)) {
+        if((inicio != 5 && fin == 0) || (inicio == 0&& fin != 5) || ((inicio != 5 && fin != 5) && !camino.contains((grafo.encontrarVertice("5"))))) {
             node_5.setIcon(new ImageIcon("src/main/java/imgs/node_5.jpeg"));
         }
     }//GEN-LAST:event_node_5MouseExited
@@ -420,6 +496,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 6) {
                 fin = 6 ;
                 node_6.setIcon(new ImageIcon("src/main/java/imgs/node_end_6.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -427,13 +504,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_6MouseClicked
 
     private void node_6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseEntered
-        if((inicio != 6 && fin != 6) || (inicio != 6 && fin == 0) || (inicio == 0&& fin != 6)) {
+        if((inicio != 6 && fin == 0) || (inicio == 0&& fin != 6) || ((inicio != 6 && fin != 6) && !camino.contains((grafo.encontrarVertice("6"))))) {
             node_6.setIcon(new ImageIcon("src/main/java/imgs/node_select_6.jpeg"));
         }
     }//GEN-LAST:event_node_6MouseEntered
 
     private void node_6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_6MouseExited
-        if((inicio != 6 && fin != 6) || (inicio != 6 && fin == 0) || (inicio == 0&& fin != 6)) {
+        if((inicio != 6 && fin == 0) || (inicio == 0&& fin != 6) || ((inicio != 6 && fin != 6) && !camino.contains((grafo.encontrarVertice("6"))))) {
             node_6.setIcon(new ImageIcon("src/main/java/imgs/node_6.jpeg"));
         }
     }//GEN-LAST:event_node_6MouseExited
@@ -446,6 +523,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 7) {
                 fin = 7 ;
                 node_7.setIcon(new ImageIcon("src/main/java/imgs/node_end_7.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -453,13 +531,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_7MouseClicked
 
     private void node_7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseEntered
-        if((inicio != 7 && fin != 7) || (inicio != 7 && fin == 0) || (inicio == 0&& fin != 7)) {
+        if((inicio != 7 && fin == 0) || (inicio == 0&& fin != 7) || ((inicio != 7 && fin != 7) && !camino.contains((grafo.encontrarVertice("7"))))) {
             node_7.setIcon(new ImageIcon("src/main/java/imgs/node_select_7.jpeg"));
         }
     }//GEN-LAST:event_node_7MouseEntered
 
     private void node_7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_7MouseExited
-        if((inicio != 7 && fin != 7) || (inicio != 7 && fin == 0) || (inicio == 0&& fin != 7)) {
+        if((inicio != 7 && fin == 0) || (inicio == 0&& fin != 7) || ((inicio != 7 && fin != 7) && !camino.contains((grafo.encontrarVertice("7"))))) {
             node_7.setIcon(new ImageIcon("src/main/java/imgs/node_7.jpeg"));
         }
     }//GEN-LAST:event_node_7MouseExited
@@ -472,6 +550,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 8) {
                 fin = 8 ;
                 node_8.setIcon(new ImageIcon("src/main/java/imgs/node_end_8.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -479,13 +558,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_8MouseClicked
 
     private void node_8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseEntered
-        if((inicio != 8 && fin != 8) || (inicio != 8 && fin == 0) || (inicio == 0&& fin != 8)) {
+        if((inicio != 8 && fin == 0) || (inicio == 0&& fin != 8) || ((inicio != 8 && fin != 8) && !camino.contains((grafo.encontrarVertice("8"))))) {
             node_8.setIcon(new ImageIcon("src/main/java/imgs/node_select_8.jpeg"));
         }
     }//GEN-LAST:event_node_8MouseEntered
 
     private void node_8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_8MouseExited
-        if((inicio != 8 && fin != 8) || (inicio != 8 && fin == 0) || (inicio == 0&& fin != 8)) {
+        if((inicio != 8 && fin == 0) || (inicio == 0&& fin != 8) || ((inicio != 8 && fin != 8) && !camino.contains((grafo.encontrarVertice("8"))))) {
             node_8.setIcon(new ImageIcon("src/main/java/imgs/node_8.jpeg"));
         }
     }//GEN-LAST:event_node_8MouseExited
@@ -498,6 +577,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 9) {
                 fin = 9 ;
                 node_9.setIcon(new ImageIcon("src/main/java/imgs/node_end_9.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -505,13 +585,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_9MouseClicked
 
     private void node_9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseEntered
-        if((inicio != 9 && fin != 9) || (inicio != 9 && fin == 0) || (inicio == 0&& fin != 9)) {
+        if((inicio != 9 && fin == 0) || (inicio == 0&& fin != 9) || ((inicio != 9 && fin != 9) && !camino.contains((grafo.encontrarVertice("9"))))) {
             node_9.setIcon(new ImageIcon("src/main/java/imgs/node_select_9.jpeg"));
         }
     }//GEN-LAST:event_node_9MouseEntered
 
     private void node_9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_9MouseExited
-        if((inicio != 9 && fin != 9) || (inicio != 9 && fin == 0) || (inicio == 0&& fin != 9)) {
+        if((inicio != 9 && fin == 0) || (inicio == 0&& fin != 9) || ((inicio != 9 && fin != 9) && !camino.contains((grafo.encontrarVertice("9"))))) {
             node_9.setIcon(new ImageIcon("src/main/java/imgs/node_9.jpeg"));
         }
     }//GEN-LAST:event_node_9MouseExited
@@ -524,6 +604,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 10) {
                 fin = 10 ;
                 node_10.setIcon(new ImageIcon("src/main/java/imgs/node_end_10.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -531,13 +612,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_10MouseClicked
 
     private void node_10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseEntered
-        if((inicio != 10 && fin != 10) || (inicio != 10 && fin == 0) || (inicio == 0&& fin != 10)) {
+        if((inicio != 10 && fin == 0) || (inicio == 0&& fin != 10) || ((inicio != 10 && fin != 10) && !camino.contains((grafo.encontrarVertice("10"))))) {
             node_10.setIcon(new ImageIcon("src/main/java/imgs/node_select_10.jpeg"));
         }
     }//GEN-LAST:event_node_10MouseEntered
 
     private void node_10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_10MouseExited
-        if((inicio != 10 && fin != 10) || (inicio != 10 && fin == 0) || (inicio == 0&& fin != 10)) {
+        if((inicio != 10 && fin == 0) || (inicio == 0&& fin != 10) || ((inicio != 10 && fin != 10) && !camino.contains((grafo.encontrarVertice("10"))))) {
             node_10.setIcon(new ImageIcon("src/main/java/imgs/node_10.jpeg"));
         }
     }//GEN-LAST:event_node_10MouseExited
@@ -550,6 +631,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 11) {
                 fin = 11 ;
                 node_11.setIcon(new ImageIcon("src/main/java/imgs/node_end_11.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -557,13 +639,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_11MouseClicked
 
     private void node_11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseEntered
-        if((inicio != 11 && fin != 11) || (inicio != 11 && fin == 0) || (inicio == 0&& fin != 11)) {
+        if((inicio != 11 && fin == 0) || (inicio == 0&& fin != 11) || ((inicio != 11 && fin != 11) && !camino.contains((grafo.encontrarVertice("11"))))) {
             node_11.setIcon(new ImageIcon("src/main/java/imgs/node_select_11.jpeg"));
         }
     }//GEN-LAST:event_node_11MouseEntered
 
     private void node_11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_11MouseExited
-        if((inicio != 11 && fin != 11) || (inicio != 11 && fin == 0) || (inicio == 0&& fin != 11)) {
+        if((inicio != 11 && fin == 0) || (inicio == 0&& fin != 11) || ((inicio != 11 && fin != 11) && !camino.contains((grafo.encontrarVertice("11"))))) {
             node_11.setIcon(new ImageIcon("src/main/java/imgs/node_11.jpeg"));
         }
     }//GEN-LAST:event_node_11MouseExited
@@ -576,6 +658,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 12) {
                 fin = 12 ;
                 node_12.setIcon(new ImageIcon("src/main/java/imgs/node_end_12.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -583,13 +666,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_12MouseClicked
 
     private void node_12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseEntered
-        if((inicio != 12 && fin != 12) || (inicio != 12 && fin == 0) || (inicio == 0&& fin != 12)) {
+        if((inicio != 12 && fin == 0) || (inicio == 0&& fin != 12) || ((inicio != 12 && fin != 12) && !camino.contains((grafo.encontrarVertice("12"))))) {
             node_12.setIcon(new ImageIcon("src/main/java/imgs/node_select_12.jpeg"));
         }
     }//GEN-LAST:event_node_12MouseEntered
 
     private void node_12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_12MouseExited
-        if((inicio != 12 && fin != 12) || (inicio != 12 && fin == 0) || (inicio == 0&& fin != 12)) {
+        if((inicio != 12 && fin == 0) || (inicio == 0&& fin != 12) || ((inicio != 12 && fin != 12) && !camino.contains((grafo.encontrarVertice("12"))))) {
             node_12.setIcon(new ImageIcon("src/main/java/imgs/node_12.jpeg"));
         }
     }//GEN-LAST:event_node_12MouseExited
@@ -602,6 +685,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 13) {
                 fin = 13 ;
                 node_13.setIcon(new ImageIcon("src/main/java/imgs/node_end_13.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -609,13 +693,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_13MouseClicked
 
     private void node_13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseEntered
-        if((inicio != 13 && fin != 13) || (inicio != 13 && fin == 0) || (inicio == 0&& fin != 13)) {
+        if((inicio != 13 && fin == 0) || (inicio == 0&& fin != 13) || ((inicio != 13 && fin != 13) && !camino.contains((grafo.encontrarVertice("13"))))) {
             node_13.setIcon(new ImageIcon("src/main/java/imgs/node_select_13.jpeg"));
         }
     }//GEN-LAST:event_node_13MouseEntered
 
     private void node_13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_13MouseExited
-        if((inicio != 13 && fin != 13) || (inicio != 13 && fin == 0) || (inicio == 0&& fin != 13)) {
+        if((inicio != 13 && fin == 0) || (inicio == 0&& fin != 13) || ((inicio != 13 && fin != 13) && !camino.contains((grafo.encontrarVertice("13"))))) {
             node_13.setIcon(new ImageIcon("src/main/java/imgs/node_13.jpeg"));
         }
     }//GEN-LAST:event_node_13MouseExited
@@ -628,6 +712,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 14) {
                 fin = 14 ;
                 node_14.setIcon(new ImageIcon("src/main/java/imgs/node_end_14.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -635,13 +720,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_14MouseClicked
 
     private void node_14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseEntered
-        if((inicio != 14 && fin != 14) || (inicio != 14 && fin == 0) || (inicio == 0&& fin != 14)) {
+        if((inicio != 14 && fin == 0) || (inicio == 0&& fin != 14) || ((inicio != 14 && fin != 14) && !camino.contains((grafo.encontrarVertice("14"))))) {
             node_14.setIcon(new ImageIcon("src/main/java/imgs/node_select_14.jpeg"));
         }
     }//GEN-LAST:event_node_14MouseEntered
 
     private void node_14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_14MouseExited
-        if((inicio != 14 && fin != 14) || (inicio != 14 && fin == 0) || (inicio == 0&& fin != 14)) {
+        if((inicio != 14 && fin == 0) || (inicio == 0&& fin != 14) || ((inicio != 14 && fin != 14) && !camino.contains((grafo.encontrarVertice("14"))))) {
             node_14.setIcon(new ImageIcon("src/main/java/imgs/node_14.jpeg"));
         }
     }//GEN-LAST:event_node_14MouseExited
@@ -654,6 +739,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
             if(inicio != 15) {
                 fin = 15 ;
                 node_15.setIcon(new ImageIcon("src/main/java/imgs/node_end_15.jpeg"));
+                setCamino() ;
             } else {
                 JOptionPane.showConfirmDialog(this, "Selecciona otro grafo de destino", "Grafo repetido", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE) ;
             }
@@ -661,13 +747,13 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
     }//GEN-LAST:event_node_15MouseClicked
 
     private void node_15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseEntered
-        if((inicio != 15 && fin != 15) || (inicio != 15 && fin == 0) || (inicio == 0&& fin != 15)) {
+        if((inicio != 15 && fin == 0) || (inicio == 0&& fin != 15) || ((inicio != 15 && fin != 15) && !camino.contains((grafo.encontrarVertice("15"))))) {
             node_15.setIcon(new ImageIcon("src/main/java/imgs/node_select_15.jpeg"));
         }
     }//GEN-LAST:event_node_15MouseEntered
 
     private void node_15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_15MouseExited
-        if((inicio != 15 && fin != 15) || (inicio != 15 && fin == 0) || (inicio == 0&& fin != 15)) {
+        if((inicio != 15 && fin == 0) || (inicio == 0&& fin != 15) || ((inicio != 15 && fin != 15) && !camino.contains((grafo.encontrarVertice("15"))))) {
             node_15.setIcon(new ImageIcon("src/main/java/imgs/node_15.jpeg"));
         }
     }//GEN-LAST:event_node_15MouseExited
@@ -676,12 +762,16 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
         setDefaultIcons() ;
         inicio = 0 ;
         fin = 0 ;
+        camino = new LinkedList() ;
+        lblDistancia.setText("Distancia:");
     }//GEN-LAST:event_btnReiniciarActionPerformed
 
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btnReiniciar;
+    private javax.swing.JLabel lblDistancia;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel node_1;
     private javax.swing.JLabel node_10;

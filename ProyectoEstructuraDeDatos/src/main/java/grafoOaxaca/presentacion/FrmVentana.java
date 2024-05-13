@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import negocios.dominioGrafo.Grafo;
 
 /**
  *
@@ -23,8 +24,10 @@ public class FrmVentana extends JFrame{
     private final CardLayout cardLayout;
     private final JPanel cardPanel;
     private final JPanel buttonPanel;
+    private Grafo k = new Grafo();
     
     public FrmVentana() {
+        setGrafoOaxaca() ;
         setTitle("Grafo de Municipios De Oaxaca");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1358, 800);
@@ -36,7 +39,7 @@ public class FrmVentana extends JFrame{
         cardPanel.setPreferredSize(new Dimension(1358, 672));
         
         // Se crean los paneles (ventanas) y se añaden los paneles al panel con CardLayout
-        cardPanel.add(new PanelGrafoOaxaca(), "PanelGrafoOaxaca");
+        cardPanel.add(new PanelGrafoOaxaca(k), "PanelGrafoOaxaca");
 //        cardPanel.add(new ArbolDeExpansionMinimaJpanel(), "ArbolDeExpansionMinimaJpanel");
 //        cardPanel.add(new RutaMasCortaJpanel(), "RutaMasCortaJpanel");
 
@@ -126,5 +129,50 @@ public class FrmVentana extends JFrame{
         });
     }
 
+    private void setGrafoOaxaca() {
+        k.agregarVertice("1");
+        k.agregarVertice("2");
+        k.agregarVertice("3");
+        k.agregarVertice("4");
+        k.agregarVertice("5");
+        k.agregarVertice("6");
+        k.agregarVertice("7");
+        k.agregarVertice("8");
+        k.agregarVertice("9");
+        k.agregarVertice("10");
+        k.agregarVertice("11");
+        k.agregarVertice("12");
+        k.agregarVertice("13");
+        k.agregarVertice("14");
+        k.agregarVertice("15");
+        
+        k.agregarArista("1", "7", 4.6);
+        k.agregarArista("1", "4", 8.7);
+        k.agregarArista("1", "13", 7.2);
+        k.agregarArista("1", "15", 7.9);
+        k.agregarArista("2", "7", 215);
+        k.agregarArista("2", "6", 390);
+        k.agregarArista("2", "10", 36.6);
+        k.agregarArista("3", "5", 44.8);
+        k.agregarArista("3", "8", 28.5);
+        k.agregarArista("3", "14", 20.8);
+        k.agregarArista("4", "13", 13);
+        k.agregarArista("4", "15", 6.8);
+        k.agregarArista("5", "8", 17);
+        k.agregarArista("5", "12", 370);
+        k.agregarArista("6", "13", 167);
+        k.agregarArista("6", "9", 286);
+        k.agregarArista("7", "15", 5.9);
+        k.agregarArista("7", "14", 255);
+        k.agregarArista("8", "15", 249);
+        k.agregarArista("8", "14", 40.8);
+        k.agregarArista("8", "12", 296);
+        k.agregarArista("9", "11", 140);
+        k.agregarArista("10", "14", 274);
+        k.agregarArista("11", "15", 188);
+        k.agregarArista("11", "12", 146);
+        k.agregarArista("12", "15", 98.9);
+        k.agregarArista("14", "15", 266);
+    }
     
 }
