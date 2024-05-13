@@ -29,10 +29,10 @@ public class ImprimirGrafo {
         }
     }
     
-    public static void imprimirMatrizAdyacencia(Grafo grafo) {
+    public static void imprimirArbolExpansionMinima(Grafo grafo) {
         Double[][] matrizAdyacencia = grafo.obtenerMatrizAdyacente();
         
-        System.out.println("\nMatriz de Adyacencia:\n");
+        System.out.println("\nArbol de Expansion Minima:\n");
         System.out.print("       ");
         for (int i = 0; i < matrizAdyacencia.length; i++) {
             System.out.printf("%-7d", i + 1);

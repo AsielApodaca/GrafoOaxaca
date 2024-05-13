@@ -123,9 +123,9 @@ public class Pruebas {
         
         System.out.println("La distancia total es: " + k.distancia(caminoAristas));
         
-//        Grafo arbolExpansionMinima = Kruskal.calcularArbolExpansionMinima(k);
-//        
-//        ImprimirGrafo.imprimirMatrizAdyacencia(arbolExpansionMinima);
+        Grafo arbolExpansionMinima = Kruskal.calcularArbolExpansionMinima(k);
+        
+        ImprimirGrafo.imprimirArbolExpansionMinima(arbolExpansionMinima);
         
 //        JFrame frame = new JFrame("Ejemplo de JPanel");
 //        PanelGrafoOaxaca panel = new PanelGrafoOaxaca() ;
