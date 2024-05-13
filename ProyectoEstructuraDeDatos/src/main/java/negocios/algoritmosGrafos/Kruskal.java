@@ -36,7 +36,7 @@ public class Kruskal {
 
         return arbolExpansionMinima;
     }
-
+    
     private static class ConjuntoDisjunto {
         private int[] parent;
         private List<Vertice> vertices ;

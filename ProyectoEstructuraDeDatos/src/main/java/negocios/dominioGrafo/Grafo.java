@@ -56,6 +56,7 @@ public class Grafo {
 
         if (vertice1 != null && vertice2 != null) {
             aristas.add(new Arista(vertice1, vertice2, peso));
+            aristas.add(new Arista(vertice2, vertice1, peso));
 
         } else {
             LOG.log(Level.WARNING, "Error: No se pudo agregar la arista, los vertices no se encontraron.");
