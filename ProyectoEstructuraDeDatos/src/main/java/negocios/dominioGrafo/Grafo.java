@@ -5,7 +5,12 @@
 package negocios.dominioGrafo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -81,4 +86,122 @@ public class Grafo {
 
         return matriz;
     }
+    
+    public List<Vertice> dijkstra(Vertice origen, Vertice destino) {
+        Map<Vertice, Double> distancias = new HashMap<>();
+        Map<Vertice, Vertice> padres = new HashMap<>();
+        PriorityQueue<Vertice> cola = new PriorityQueue<>(Comparator.comparingDouble(distancias::get));
+        for (Vertice vertice : vertices) {
+            
+            distancias.put(vertice, Double.POSITIVE_INFINITY);
+            padres.put(vertice, null);
+            
+        }
+        
+        distancias.put(origen, 0.0);
+        cola.add(origen);
+        while (!cola.isEmpty()) {
+            
+            Vertice actual = cola.poll();
+            for (Arista arista : obtenerAristasSalientes(actual)) {
+                
+                Vertice vecino = arista.getDestino();
+                double pesoTotal = distancias.get(actual) + arista.getPeso();
+
+                if (pesoTotal < distancias.get(vecino)) {
+                    
+                    distancias.put(vecino, pesoTotal);
+                    padres.put(vecino, actual);
+                    cola.add(vecino);
+                    
+                }
+                
+            }
+            
+        }
+
+        List<Vertice> camino = new ArrayList<>();
+        Vertice actual = destino;
+        while (actual != null) {
+            
+            camino.add(actual);
+            actual = padres.get(actual);
+            
+        }
+        
+        Collections.reverse(camino);
+        return camino;
+        
+    }
+    
+    public List<Arista> obtenerAristasSalientes(Vertice vertice) {
+        
+        List<Arista> aristasSalientes = new ArrayList<>();
+        for (Arista arista : aristas) {
+            
+            if (arista.getOrigen().equals(vertice)) {
+                
+                aristasSalientes.add(arista);
+                
+            }
+            
+        }
+        
+        return aristasSalientes;
+    
+    }
+    
+    public Arista buscarArista(Vertice origen, Vertice destino){
+        
+        for (Arista arista : aristas) {
+            
+            if (arista.getOrigen().equals(origen) && arista.getDestino().equals(destino)) {
+               
+                return arista;
+                
+            }
+            
+        }
+        
+        return null;
+        
+    }
+    
+    public List<Arista> caminoAristas(List<Vertice> caminoVertice){
+        
+        List<Arista> aristasEnCamino = new ArrayList<>();
+        for (int i = 0; i < caminoVertice.size() - 1; i++) {
+            
+            Vertice actual = caminoVertice.get(i);
+            Vertice siguiente = caminoVertice.get(i + 1);
+            Arista arista = buscarArista(actual, siguiente);
+            if (arista != null) {
+                
+                aristasEnCamino.add(arista);
+                
+            } else {
+                
+                return null;
+                
+            }
+            
+        }
+
+        return aristasEnCamino;
+        
+    }
+    
+    public double distancia(List<Arista> camino){
+        
+        double distancia = 0;
+        for(Arista arista: camino){
+            
+            distancia = distancia + arista.getPeso();
+            
+        }
+        
+        return distancia;
+        
+    }
+    
 }

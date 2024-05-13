@@ -26,4 +26,12 @@ public class Vertice {
     public void setMunicipio(String municipio) {
         this.municipio = municipio;
     }
+
+    @Override
+    public String toString() {
+        return municipio;
+    }
+    
+    
+    
 }
