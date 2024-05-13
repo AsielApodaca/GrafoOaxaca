@@ -2,7 +2,9 @@ package negocios.algoritmosGrafos;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import negocios.dominioGrafo.Arista;
 import negocios.dominioGrafo.Grafo;
@@ -14,7 +16,9 @@ public class Kruskal {
         Grafo arbolExpansionMinima = new Grafo();
         arbolExpansionMinima.setVertices(grafo.getVertices());
         
-        List<Arista> aristasOrdenadasPorPeso = new ArrayList<>(grafo.getAristas());
+        
+        
+        List<Arista> aristasOrdenadasPorPeso = new ArrayList<>(eliminarAristasDuplicadas(grafo.getAristas()));
         Collections.sort(aristasOrdenadasPorPeso, (a1, a2) -> Double.compare(a1.getPeso(), a2.getPeso()));
         
 
@@ -37,6 +41,23 @@ public class Kruskal {
         return arbolExpansionMinima;
     }
 
+    public static List<Arista> eliminarAristasDuplicadas(List<Arista> aristas) {
+        List<Arista> aristasSinDuplicados = new ArrayList<>();
+        Set<Arista> aristasProcesadas = new HashSet<>();
+
+        for (Arista arista : aristas) {
+            // Verifica si la arista inversa ya ha sido procesada
+            Arista aristaInversa = new Arista(arista.getDestino(), arista.getOrigen(), arista.getPeso());
+            if (!aristasProcesadas.contains(aristaInversa)) {
+                aristasSinDuplicados.add(arista);
+                aristasProcesadas.add(arista);
+            }
+        }
+
+        return aristasSinDuplicados;
+    }
+    
+    
     private static class ConjuntoDisjunto {
         private int[] parent;
         private List<Vertice> vertices ;
