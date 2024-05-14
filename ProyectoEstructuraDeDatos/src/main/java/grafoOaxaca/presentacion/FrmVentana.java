@@ -13,7 +13,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import negocios.algoritmosGrafos.Kruskal;
 import negocios.dominioGrafo.Grafo;
+import negocios.servicios.ImprimirGrafo;
 
 /**
  *
@@ -72,6 +74,8 @@ public class FrmVentana extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarVentana("PanelArbolExpMinima");
+                System.out.println("\nArbol de Expansion Minima:\n");
+                ImprimirGrafo.imprimirMatriz(Kruskal.calcularArbolExpansionMinima(k));
             }
         });
         
@@ -79,6 +83,8 @@ public class FrmVentana extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarVentana("PanelMatrizAdyacencia");
+                System.out.println("\nMatriz de adyacencia:\n");
+                ImprimirGrafo.imprimirMatriz(k);
             }
         });
         
