@@ -125,7 +125,7 @@ public class Pruebas {
         
         Grafo arbolExpansionMinima = Kruskal.calcularArbolExpansionMinima(k);
         
-        ImprimirGrafo.imprimirArbolExpansionMinima(arbolExpansionMinima);
+        ImprimirGrafo.imprimirMatriz(arbolExpansionMinima);
         
 //        JFrame frame = new JFrame("Ejemplo de JPanel");
 //        PanelGrafoOaxaca panel = new PanelGrafoOaxaca() ;
