@@ -435,7 +435,7 @@ public class PanelGrafoOaxaca extends javax.swing.JPanel {
         add(municipio15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 550, 220, 20));
 
         lblDescripcion.setText("(Ordenados por Población)");
-        add(lblDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 100, -1, -1));
+        add(lblDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 100, 190, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void node_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_node_1MouseClicked

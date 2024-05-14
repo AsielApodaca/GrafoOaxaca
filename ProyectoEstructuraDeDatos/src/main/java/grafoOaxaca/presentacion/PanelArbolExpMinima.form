@@ -21,11 +21,38 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="matrizAdyacencia" alignment="0" pref="1358" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-              <Component id="lblTitulo" min="-2" pref="589" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                      <Component id="lblTitulo" min="-2" pref="589" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="matrizAdyacencia" alignment="0" min="-2" pref="1008" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblMunicipios" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio2" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio3" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio4" min="-2" pref="320" max="-2" attributes="0"/>
+                  <Component id="municipio5" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio6" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio7" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="municipio8" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio9" min="-2" pref="230" max="-2" attributes="0"/>
+                  <Component id="municipio10" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio11" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio12" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio13" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio14" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio15" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Component id="municipio1" min="-2" pref="220" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="lblDescripcion" min="-2" pref="166" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -36,6 +63,43 @@
               <Component id="lblTitulo" pref="68" max="32767" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="matrizAdyacencia" min="-2" pref="580" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+              <Component id="lblMunicipios" min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="lblDescripcion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+              <Component id="municipio2" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio3" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio4" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio5" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio6" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio7" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio8" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio9" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio10" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio11" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio12" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio13" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio14" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio15" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="municipio1" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,6 +113,139 @@
           <Font name="Segoe UI" size="36" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Arbol de Expansi&#xf3;n M&#xed;nima"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblMunicipios">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="36" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MUNICIPIOS:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="15. San Antonio de la Cal"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="1. Oaxaca"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="2. San Juan Bautista Tuxtepec"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="3. Heroica Ciudad de Juchit&#xe1;n de Zaragoza"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="4. Santa Cruz Xoxocotl&#xe1;n"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio6">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="5. Salina Cruz"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio7">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="6. Heroica Ciudad de Huajapan de Le&#xf3;n"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio8">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="7. Santa Luc&#xed;a del Camino"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio9">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="8. Santo Domingo Tehuantepec"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio10">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="9. Santiago Pinotepa Nacional"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio11">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="10. Loma Bonita"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio12">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="11. Puerto Escondido"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio13">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="12. Miahuatl&#xe1;n de Porfirio D&#xed;az"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio14">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="13. Santa Mar&#xed;a Atzompa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="municipio15">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="14. Ciudad Ixtepec"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDescripcion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="(Ordenados por Poblaci&#xf3;n)"/>
       </Properties>
     </Component>
   </SubComponents>
